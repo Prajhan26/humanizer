@@ -82,6 +82,20 @@ Two additions the Wikipedia page does not yet catalog as such, drawn from
 
 Both are flagged here rather than presented as Wikipedia's findings.
 
+## Known gap: paragraph cadence
+
+The primary source catalogs vocabulary, sentence patterns, markup, and
+citation problems. It does not cover format rhythm — the sequence of
+one-or-two-sentence paragraphs each landing on a beat, common to LLM output
+and to the founder-post register it was trained on. Testing found this is
+often what makes a long personal draft read machine-written even after every
+catalogued pattern is cleared, and that consolidating paragraphs while
+rejoining the beats with periods changes the count without changing the
+rhythm.
+
+The skill is instructed to treat calls here as its own rather than the
+source's. Nothing in Wikipedia's page supports them.
+
 ## Context worth knowing
 
 Since March 2026, Wikipedia's WP:LLM guideline has prohibited using LLMs to

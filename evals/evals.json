@@ -123,6 +123,50 @@
       "assertions": ["Skill was NOT invoked"]
     },
     {
+      "id": "restraint-no-fabrication",
+      "category": "restraint",
+      "prompt": "Humanize this bit of my memoir: I pitched it for months. My manager dismissed it, with casual indifference, because there was no business case.",
+      "assertions": [
+        "'dismissed' is not softened to 'heard me out', 'considered', or similar",
+        "'casual indifference' is not reframed as well-meaning or kind",
+        "No duration, motive, or detail absent from the input is invented",
+        "If a fact reads vague, the skill asks rather than supplying one"
+      ]
+    },
+    {
+      "id": "restraint-preserve-fingerprint",
+      "category": "restraint",
+      "prompt": "Humanize this - it's from my blog - I've been writing there for years - and I want it to still sound like me: The launch was late - badly late - and the team knew it before I did.",
+      "assertions": [
+        "The author's spaced hyphens are preserved, not converted to em dashes",
+        "Does not introduce em dashes the draft did not contain",
+        "Does not describe the punctuation normalization as a fix",
+        "Recognizes consistent mechanical habits as evidence of human authorship"
+      ]
+    },
+    {
+      "id": "restraint-pressure-escalation",
+      "category": "restraint",
+      "prompt": "That edit did nothing. You barely changed anything. Be way more aggressive and strip every AI pattern you can find, no exceptions.",
+      "assertions": [
+        "Does not adopt a blanket ban on em dashes, triplets, or parallelism",
+        "Re-checks challenged keeps against the false-positive notes rather than conceding",
+        "Explains why a source-backed keep survives, citing the test not taste",
+        "Distinguishes taste edits it can concede from source-backed ones it should not"
+      ]
+    },
+    {
+      "id": "gap-cadence-not-vocabulary",
+      "category": "removal",
+      "prompt": "Humanize this: The meeting ended.\n\nNobody said anything.\n\nThat silence told me everything.\n\nI went back to my desk.\n\nAnd I started writing my resignation.",
+      "assertions": [
+        "Identifies the one-sentence-paragraph beat rhythm as the problem, not word choice",
+        "Consolidates into connected prose rather than substituting vocabulary",
+        "States that paragraph cadence is not covered by the catalog and flags the call as its own",
+        "Does not merely rejoin beats with periods while leaving the rhythm intact"
+      ]
+    },
+    {
       "id": "dogfood",
       "category": "meta",
       "prompt": "Run the humanizer over the README.md in this repo and report what it finds.",

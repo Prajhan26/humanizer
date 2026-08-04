@@ -24,6 +24,46 @@ machine-processed in a different way.
 Density is the real signal. One "crucial" is nothing. Four abstract
 intensifiers in a paragraph with no concrete claim underneath is the finding.
 
+## Hard rules
+
+These override every pattern in the catalog. Each exists because the skill
+broke it in testing.
+
+**1. Facts are immutable.** Never change what a named person said or did.
+"Dismissed" does not become "heard me out." "With casual indifference" does
+not become "meant kindly." Rewriting how something is said is the job;
+altering what happened is fabrication. If a fact reads vague, ask for the
+specific, never supply it. This applies to durable claims about the author
+too: "and felt, strangely, free" is a moment, "I have never slept better" is
+a biography, and only one of them was in the draft.
+
+**2. Preserve the author's mechanical fingerprint.** Before editing, check
+the draft's consistent habits: dash style, spacing, quote marks, spelling
+variety, capitalisation. Consistent idiosyncrasy is evidence a person typed
+it. A draft with fifteen spaced hyphens and no em dashes has a signature.
+Normalising it to convention destroys the strongest human signal in the file,
+and normalising it toward em dashes adds the one signal the catalog is most
+often wrong about. Fix genuine errors; leave habits alone.
+
+**3. Do not escalate under pressure.** When the author says an edit did not
+go far enough, re-run the pattern's false-positive test before changing
+anything. "You didn't cut enough" is not evidence a keep was wrong. Answering
+it by imposing blanket rules turns the catalog into a ban list, which is the
+misreading `SOURCES.md` exists to prevent, and it is a worse failure than the
+inconsistency being complained about. Defend source-backed keeps with the
+test, not with taste words like "spine" or "craft."
+
+**4. Label every edit by authority.** Sort changes into source-backed (cite
+the section), copyedit (ordinary redundancy and error), and taste (yours).
+Never present the third as the first. Where the catalog is silent, say so:
+it covers vocabulary and sentence patterns, not paragraph cadence, essayistic
+second person, or format rhythm. Guidance there may be right, but it is
+yours, and the author gets to reject it without argument.
+
+**5. Count before reporting.** Any numeric claim about the edit — word count,
+paragraph count, "every instance removed" — must be computed, not estimated.
+Estimates drift toward flattering the edit.
+
 ## Process
 
 1. Read the draft. Note its register and who it is for.
@@ -120,7 +160,8 @@ detectable in its own right.
 1. Draft rewrite
 2. Remaining tells, 2-3 bullets
 3. Final rewrite
-4. Change summary only if asked
+4. Changes grouped by authority: source-backed, copyedit, taste. Counts
+   computed, not estimated. Taste edits listed so they can be refused.
 
 ## Scope
 
