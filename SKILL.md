@@ -67,12 +67,18 @@ Estimates drift toward flattering the edit.
 ## Process
 
 1. Read the draft. Note its register and who it is for.
-2. Scan the pattern families below. Load `reference.md` for the full catalog,
+2. If the draft is a file, run `python3 scripts/scan.py FILE` and work from
+   its output. It gives you the fingerprint to preserve, computed counts, and
+   catalog hits with the governing section, which satisfies rules 2 and 5
+   mechanically. A low signal count is not a clean bill of health: the scan
+   cannot see bare antithesis, an analogy that fails to close, a claim with
+   no evidence, or cadence. Those still need reading.
+3. Scan the pattern families below. Load `reference.md` for the full catalog,
    examples, and the false-positive notes on any pattern needing judgment.
-3. Rewrite. Preserve meaning and register. Remove the machine's habits, not
+4. Rewrite. Preserve meaning and register. Remove the machine's habits, not
    the author's.
-4. Audit: what still reads as generated? Two or three bullets.
-5. Revise once more from that audit. Output the final version.
+5. Audit: what still reads as generated? Two or three bullets.
+6. Revise once more from that audit. Output the final version.
 
 ## Pattern families
 

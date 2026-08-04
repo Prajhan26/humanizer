@@ -30,16 +30,54 @@ in that repo.
 
 ## Use
 
-```
-/humanizer
-```
-
-then paste the draft. Or describe the problem and let Claude load it:
+Paste a draft after `/humanizer`, or describe the problem and let Claude load
+the skill:
 
 ```
 Does this sound like AI wrote it?
 Rewrite this so it doesn't read like ChatGPT.
 ```
+
+### Clone and run it on a file
+
+Clone the repo, drop your draft in `drafts/`, and cross-check it against the
+catalog before anything is rewritten:
+
+```bash
+git clone https://github.com/Prajhan26/humanizer.git
+cd humanizer
+python3 scripts/scan.py drafts/my-post.md
+```
+
+The scan is deterministic. No API key, no network, stdlib only. It reports:
+
+- **Your mechanical fingerprint** — dash style, quote style, counts. These
+  are habits to preserve. If you use spaced hyphens and no em dashes, that is
+  a signature, and the scan says so rather than normalizing it away.
+- **Catalog hits with the governing section**, so every flag is traceable to
+  the rule that produced it and to that rule's false-positive note.
+- **Understated-layer density** as a rate, never as individual hits, because
+  `reference.md` 1.4 says to flag only on density plus emptiness.
+
+Then in Claude Code from the same directory:
+
+```
+/humanizer drafts/my-post.md
+```
+
+Claude works from the scan as evidence and returns the rewrite with every
+change labelled source-backed, copyedit, or taste. The taste ones are yours
+to refuse.
+
+Drafts in `drafts/` are gitignored, so they stay in your clone.
+
+**What the scan cannot see.** Regex catches the contrast reframe in its
+written forms; it cannot catch the same move as bare antithesis ("The mind
+negotiates; the gut declares"). It cannot tell whether an analogy closes,
+whether a claim has evidence, or whether the cadence fits the register —
+which is often what actually makes a draft read machine-written. A low count
+is not a clean bill of health, and the scan never issues a verdict on
+authorship.
 
 ## Layout
 
@@ -48,7 +86,9 @@ humanizer/
 ├── SKILL.md              # the skill; loaded into context when invoked
 ├── reference.md          # full pattern catalog; loaded on demand
 ├── SOURCES.md            # provenance and adaptations
+├── drafts/               # put your draft here; gitignored
 ├── evals/evals.json      # test cases
+├── scripts/scan.py       # deterministic pattern + fingerprint scan
 ├── scripts/validate.py   # structural checks
 └── .github/workflows/    # CI
 ```

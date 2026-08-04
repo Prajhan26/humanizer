@@ -137,7 +137,8 @@ def check_json():
 
 
 def check_required_files():
-    for name in ("README.md", "reference.md", "SOURCES.md", "LICENSE"):
+    for name in ("README.md", "reference.md", "SOURCES.md", "LICENSE",
+                 "scripts/scan.py", "drafts/README.md", "drafts/.gitignore"):
         if not (ROOT / name).exists():
             fail(f"{name} missing.")
 
