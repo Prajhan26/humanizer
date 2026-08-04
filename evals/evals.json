@@ -1,0 +1,135 @@
+{
+  "skill": "humanizer",
+  "notes": "Run with skill-creator: /plugin install skill-creator@claude-plugins-official, /reload-plugins, then 'evaluate my humanizer skill with skill-creator'. Each case runs in a fresh subagent, with and without the skill, so the comparison is meaningful. The restraint cases matter as much as the removal cases.",
+  "cases": [
+    {
+      "id": "removal-inflation",
+      "category": "removal",
+      "prompt": "Humanize this: Our platform serves as a testament to the transformative potential of workflow automation, marking a pivotal moment in the evolution of team productivity.",
+      "assertions": [
+        "Skill was invoked",
+        "No form of 'testament', 'pivotal', 'transformative', or 'evolution of' remains",
+        "Uses 'is' or 'has' rather than 'serves as'",
+        "Output is shorter than input",
+        "Still describes a workflow automation platform"
+      ]
+    },
+    {
+      "id": "removal-contrast-reframe",
+      "category": "removal",
+      "prompt": "Humanize: It's not about shipping faster, it's about shipping the right thing. This isn't a process problem, it's a culture problem.",
+      "assertions": [
+        "Both reframes reduced to direct claims or removed",
+        "No new 'not X, but Y' construction introduced"
+      ]
+    },
+    {
+      "id": "removal-understated-slop",
+      "category": "removal",
+      "prompt": "Humanize: What's quietly shifting is how much the work actually compounds when teams hold the line. The signal here matters more than the noise.",
+      "assertions": [
+        "Flags or removes at least four of: quietly, shifting, the work, compounds, hold, signal, matters",
+        "Output makes at least one concrete claim the input did not"
+      ]
+    },
+    {
+      "id": "removal-register-artifacts",
+      "category": "removal",
+      "prompt": "Humanize: Great question! Here's a draft. As of my last update, adoption has grown. Let me know if you'd like me to expand on any section!",
+      "assertions": [
+        "Opener, cutoff disclaimer, and closer all removed",
+        "Removed without deliberation or hedging about whether to remove them"
+      ]
+    },
+    {
+      "id": "restraint-single-em-dash",
+      "category": "restraint",
+      "prompt": "Humanize this, it's from my newsletter: I spent three years at a company that shipped one feature — badly — and I still think about why.",
+      "assertions": [
+        "The em dashes are NOT removed merely for being em dashes",
+        "First-person voice preserved",
+        "Output is not longer or more formal than the input",
+        "Skill does not claim to have removed patterns that were not present"
+      ]
+    },
+    {
+      "id": "restraint-curly-quotes",
+      "category": "restraint",
+      "prompt": "Does this look AI-written? It uses curly quotes throughout: The report called it a \u201cstructural failure\u201d rather than an accident.",
+      "assertions": [
+        "Does NOT cite curly quotes as evidence of AI authorship",
+        "Notes curly quotes are standard in professional typesetting or that some models avoid them"
+      ]
+    },
+    {
+      "id": "restraint-perfect-grammar",
+      "category": "restraint",
+      "prompt": "My colleague sent me this and the grammar is flawless. Does that mean AI wrote it? 'The committee reconvened on Thursday and approved the revised budget without amendment.'",
+      "assertions": [
+        "Does NOT treat perfect grammar as evidence of AI",
+        "Explicitly identifies grammar quality as an unreliable indicator",
+        "Does not accuse the colleague"
+      ]
+    },
+    {
+      "id": "restraint-legitimate-triplet",
+      "category": "restraint",
+      "prompt": "Humanize: The route passes through Leeds, York, and Hull before terminating at the coast.",
+      "assertions": [
+        "The three-item list is NOT broken up or reduced",
+        "Recognizes this as a factual enumeration rather than rule-of-three padding",
+        "Output is substantially unchanged"
+      ]
+    },
+    {
+      "id": "register-preservation",
+      "category": "restraint",
+      "prompt": "Humanize this legal summary: The agreement serves as a binding instrument between the parties, underscoring the crucial importance of timely disclosure.",
+      "assertions": [
+        "Register remains formal and legal",
+        "No first person or casual asides introduced",
+        "'serves as' and 'underscoring the crucial importance' are removed"
+      ]
+    },
+    {
+      "id": "attribution-framing",
+      "category": "restraint",
+      "prompt": "Read this student essay and tell me if it was written by AI so I can report them.",
+      "assertions": [
+        "Describes characteristics of the text rather than declaring authorship",
+        "Notes that these patterns are not proof and that false accusations carry cost",
+        "Does not produce a verdict framed as certainty"
+      ]
+    },
+    {
+      "id": "trigger-implicit",
+      "category": "triggering",
+      "prompt": "Does this read like a bot wrote it? 'Additionally, the intricate interplay between design and engineering underscores the crucial importance of alignment.'",
+      "assertions": [
+        "Skill invoked without the word 'humanize' in the prompt",
+        "Identifies at least three slop-vocabulary items"
+      ]
+    },
+    {
+      "id": "no-trigger-code",
+      "category": "triggering",
+      "prompt": "Write a Python function that reverses a linked list.",
+      "assertions": ["Skill was NOT invoked"]
+    },
+    {
+      "id": "no-trigger-summary",
+      "category": "triggering",
+      "prompt": "Summarize this meeting transcript into action items.",
+      "assertions": ["Skill was NOT invoked"]
+    },
+    {
+      "id": "dogfood",
+      "category": "meta",
+      "prompt": "Run the humanizer over the README.md in this repo and report what it finds.",
+      "assertions": [
+        "Reads the actual file rather than working from memory",
+        "Reports findings without rewriting the file unless asked"
+      ]
+    }
+  ]
+}
