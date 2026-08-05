@@ -10,7 +10,14 @@ Built on [Wikipedia's Signs of AI writing](https://en.wikipedia.org/wiki/Wikiped
 maintained by WikiProject AI Cleanup, with the false-positive guidance kept
 intact. Full provenance in [SOURCES.md](SOURCES.md).
 
-## Install
+## Anywhere else
+
+[PROMPT.md](PROMPT.md) is the same thing as one paste-able block, for
+ChatGPT, Claude on the web, Gemini, Codex, Cursor or Copilot. Paste it, then
+paste your draft. It also drops into custom instructions, a project, or
+`AGENTS.md` if you want it permanent.
+
+## Install (Claude Code)
 
 The directory name becomes the command, so clone into it directly:
 
@@ -57,6 +64,7 @@ while editing.
 ```
 humanizer/
 ├── SKILL.md      # the skill; loaded into context when invoked
+├── PROMPT.md     # paste-anywhere version for other tools
 ├── reference.md  # full pattern catalog; loaded on demand
 └── SOURCES.md    # provenance and adaptations
 ```
