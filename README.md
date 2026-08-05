@@ -10,6 +10,54 @@ Built on [Wikipedia's Signs of AI writing](https://en.wikipedia.org/wiki/Wikiped
 maintained by WikiProject AI Cleanup, with the false-positive guidance kept
 intact. Full provenance in [SOURCES.md](SOURCES.md).
 
+## What this is
+
+A skill built for ADITI, so drafts leave sounding like the person who wrote
+them.
+
+It is not a detector-evasion tool and it does not have a house style it
+pushes everything toward. It removes what the model added and leaves what you
+brought. Where it has an opinion of its own, it says so and you can refuse
+it.
+
+The hard part is restraint. A tool that strips every flagged pattern
+produces prose that is clean, correct and dead, which is its own kind of
+tell. Half the rules in this repo exist to stop the skill doing that.
+
+## Before and after
+
+From the ADITI Substack. The founder essay that stress-tested this skill.
+
+**Before**
+
+> I was in Ghana in 2010, working in financial services. Carrying cash wasn't
+> merely cumbersome; it was unsafe. People had been harmed because of it.
+
+**After**
+
+> I was in Ghana in 2010, working in financial services. Carrying cash was
+> unsafe. People had been harmed because of it.
+
+"Wasn't merely cumbersome" is a contrast reframe (1.5) — it invents an
+opposition so the resolution sounds like insight. Cumbersome was never the
+claim, and the next sentence carries the weight anyway.
+
+Now the same pattern, kept:
+
+> Because that's what this stage really is: not fear of losing anything, but
+> the discomfort of waiting for your outer reality to catch up with the inner
+> truth you've already admitted to yourself.
+
+Identical construction. The skill cut it, and that was wrong. Readers *do*
+bring "fear of losing something" to a resignation story, so denying it is a
+correction rather than padding — and it sets up a distinction the essay
+collects on two paragraphs later. Restored, and the catch became
+[rule 6](SKILL.md).
+
+Six instances flagged across 1,189 words. Three survived the test. That ratio
+is the whole design: the scan finds the construction, only reading can tell
+you whether the opposition is real.
+
 ## Anywhere else
 
 [PROMPT.md](PROMPT.md) is the same thing as one paste-able block, for
@@ -73,52 +121,73 @@ humanizer/
 context for the rest of the session, so every line is a recurring cost. The
 catalog lives in `reference.md` and loads only when a pattern needs judgment.
 
-## What it does
+## What it catches
 
-Removes puffery, slop vocabulary in both its inflated and understated forms,
-contrast reframes, rule-of-three padding, false ranges, vague attribution,
-tacked-on analysis, formulaic scaffolding, hedging stacks, and leftover
-chatbot register. Then puts voice back, because clean and voiceless is its
-own tell.
-
-Full catalog with examples: [reference.md](reference.md).
+Nine categories of AI voice killer:
 
 | Pattern | What it looks like | Section |
 |---|---|---|
 | Significance inflation | "marks a pivotal moment in the evolution of..." | 1.1 |
 | Rule of three | "fast, cheap, and secure" | 1.7 |
-| The -ing tack-on | "...enabling new possibilities, fostering adoption" | 1.9 |
-| Vague attribution | "Industry observers note..." | 1.10 |
-| Generic conclusions | "The future looks bright" | 1.15 |
-| Litotes | "not unlike," "not without merit" | 1.18 |
-| Announcement register | "We're thrilled to share..." | 1.19 |
+| Thrilled-to-announce energy | "We're excited to share..." | 1.19 |
 | Corporate vagueness | "leveraging our ecosystem's synergies" | 1.20 |
+| The -ing tack-on | "...enabling new possibilities, fostering adoption" | 1.9 |
+| Litotes | "not unlike," "not without merit" | 1.18 |
+| Vague attribution | "Industry observers note..." | 1.10 |
 | Listicle brain | Bullet points where prose should be | 2.6 |
+| Generic conclusions | "The future looks bright" | 1.15 |
 
-## What it writes instead
+Plus format-level tells: bold and emoji spam, Title Case headings,
+sycophantic openers, cutoff disclaimers, and em dash *density* — not a ban,
+for the reason in "What it deliberately does not do" below.
 
-The skill also encodes a position on writing, in
-[reference.md](reference.md) Part 6: commit to a point of view, lead with
-concrete detail, build narrative tension, close on something specific. The
-recurring failure it targets is the unattached data point — a number alone is
-a number, a number with "which tells you..." after it is a post.
+Then it puts voice back, because clean and voiceless is its own tell. Full
+catalog with examples: [reference.md](reference.md).
 
-It is format-aware. A short post's first line *is* the post. A thread puts
-the hook in entry one and lands rather than summarizes. Long-form opens on
-tension, not conclusion, and its subheadings describe rather than perform. A
-newsletter's subject line states a fact or creates curiosity the reader
-cannot resolve by guessing.
+## Format-aware
 
-The voice principles draw on how four writers operate — Paul Graham's
-abstract claim followed by a concrete example inside two sentences, Morgan
-Housel's apparently unrelated opening story that snaps into focus, Lyn
-Alden's willingness to show her work and say what the data means, Cobie's
-refusal to soften the thing everyone is thinking. Not templates. Proof that
-committing to a perspective works across very different subjects.
+The skill adapts to what you are writing.
 
-None of Part 6 comes from the primary sources, and the skill is required to
-label edits driven by it as taste rather than source-backed. See
-[SOURCES.md](SOURCES.md).
+**Short-form posts** — the first line is the post. One idea. No "hot take:"
+prefixes.
+
+**Threads** — hook in tweet one, each post advances the idea, the last post
+lands with finality rather than summarising.
+
+**Long-form** — open on tension, not conclusion. Paragraphs develop one idea
+fully. Subheadings describe, they do not perform.
+
+**Newsletters** — subject line conveys a fact or creates genuine curiosity.
+Register between a sharp blog post and a warm personal message.
+
+## Writing influences
+
+It also encodes a philosophy, in [reference.md](reference.md) Part 6: commit
+to a point of view, lead with concrete detail, build narrative tension, close
+on something specific. The recurring failure it targets is the unattached
+data point — a number alone is a number, a number with "which tells you..."
+after it is a post.
+
+The voice principles draw on how four writers operate.
+
+**Paul Graham** — abstract claim followed by a concrete example within two
+sentences. Short words. Treats the reader as smart but busy.
+
+**Morgan Housel** — opens with a small story that seems unrelated, then snaps
+it into focus. Writes to learn, not to report.
+
+**Lyn Alden** — shows her work. Uses data, forms opinions about what it
+means, does not perform neutrality.
+
+**Cobie** — says the thing people are thinking but not saying. No hedging, no
+softening.
+
+These are not templates. They are proof that committing to a perspective
+works across very different subjects and styles.
+
+None of Part 6 comes from the primary sources. The skill is required to label
+edits driven by it as taste rather than source-backed, which means you can
+throw any of it out. See [SOURCES.md](SOURCES.md).
 
 ## What it deliberately does not do
 
@@ -163,3 +232,7 @@ rather than attributing it to Wikipedia.
 
 MIT for this repository. Source material is CC BY-SA 4.0; see
 [SOURCES.md](SOURCES.md).
+
+---
+
+Built for ADITI, with gratitude.
