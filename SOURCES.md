@@ -134,8 +134,7 @@ also entering an arms race you will lose on a schedule set by someone else.
 ## Re-verification
 
 The primary page changes frequently and its vocabulary lists go stale as
-models update. Re-check at least twice a year. `scripts/validate.py` checks
-structure, not currency.
+models update. Re-check at least twice a year.
 
 When updating: preserve the false-positive notes, keep additions from outside
 the primary sources in the "Material from outside" section above rather than

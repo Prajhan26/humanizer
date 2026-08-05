@@ -52,59 +52,13 @@ In that mode the catalog acts as a constraint on generation rather than a
 cleanup pass, since models produce these patterns while composing, not only
 while editing.
 
-### Clone and run it on a file
-
-Clone the repo, drop your draft in `drafts/`, and cross-check it against the
-catalog before anything is rewritten:
-
-```bash
-git clone https://github.com/Prajhan26/humanizer.git
-cd humanizer
-python3 scripts/scan.py drafts/my-post.md
-```
-
-The scan is deterministic. No API key, no network, stdlib only. It reports:
-
-- **Your mechanical fingerprint** — dash style, quote style, counts. These
-  are habits to preserve. If you use spaced hyphens and no em dashes, that is
-  a signature, and the scan says so rather than normalizing it away.
-- **Catalog hits with the governing section**, so every flag is traceable to
-  the rule that produced it and to that rule's false-positive note.
-- **Understated-layer density** as a rate, never as individual hits, because
-  `reference.md` 1.4 says to flag only on density plus emptiness.
-
-Then in Claude Code from the same directory:
-
-```
-/humanizer drafts/my-post.md
-```
-
-Claude works from the scan as evidence and returns the rewrite with every
-change labelled source-backed, copyedit, or taste. The taste ones are yours
-to refuse.
-
-Drafts in `drafts/` are gitignored, so they stay in your clone.
-
-**What the scan cannot see.** Regex catches the contrast reframe in its
-written forms; it cannot catch the same move as bare antithesis ("The mind
-negotiates; the gut declares"). It cannot tell whether an analogy closes,
-whether a claim has evidence, or whether the cadence fits the register —
-which is often what actually makes a draft read machine-written. A low count
-is not a clean bill of health, and the scan never issues a verdict on
-authorship.
-
 ## Layout
 
 ```
 humanizer/
-├── SKILL.md              # the skill; loaded into context when invoked
-├── reference.md          # full pattern catalog; loaded on demand
-├── SOURCES.md            # provenance and adaptations
-├── drafts/               # put your draft here; gitignored
-├── evals/evals.json      # test cases
-├── scripts/scan.py       # deterministic pattern + fingerprint scan
-├── scripts/validate.py   # structural checks
-└── .github/workflows/    # CI
+├── SKILL.md      # the skill; loaded into context when invoked
+├── reference.md  # full pattern catalog; loaded on demand
+└── SOURCES.md    # provenance and adaptations
 ```
 
 `SKILL.md` stays short deliberately. Once invoked, its content persists in
@@ -180,35 +134,6 @@ false positives in both directions, and even trained human reviewers land
 around 90%, meaning one confident judgment in ten is wrong. False accusations
 have real cost.
 
-## Testing
-
-```bash
-pip install pyyaml
-python3 scripts/validate.py
-```
-
-Checks frontmatter YAML validity, unrecognized fields, the 1,536-character
-description budget, the 500-line ceiling, broken file references, and nested
-`SKILL.md` files. That last check exists because a buried `SKILL.md` is the
-single most common reason a skill silently never loads.
-
-For behavioral testing:
-
-```
-/plugin install skill-creator@claude-plugins-official
-/reload-plugins
-```
-
-Then: `evaluate my humanizer skill with skill-creator`.
-
-`evals/evals.json` splits into removal, restraint, and triggering categories.
-The restraint cases matter most. Over-application is the dominant failure
-mode for this kind of skill, and a suite that only tests removal will happily
-pass a version that strips every em dash from a newsletter.
-
-Run comparisons in a fresh session. Leftover context from editing the skill
-hides gaps in the written instructions.
-
 ## Scope
 
 This is a writing tool. The material it is built on is a detection guide,
@@ -224,8 +149,7 @@ Re-verify against the primary sources at least twice a year; the vocabulary
 lists go stale as models change. Preserve the false-positive notes: most
 downstream summaries drop them, which is how the em dash myth spread. Keep
 material from outside the primary sources in its own section in `SOURCES.md`
-rather than attributing it to Wikipedia. Add an eval case for any failure
-mode you fix, including a restraint case when the fix is "stop doing this."
+rather than attributing it to Wikipedia.
 
 ## License
 

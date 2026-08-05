@@ -52,13 +52,32 @@ and therefore harder to spot.
 
 ## 1.3 Slop vocabulary, inflated layer
 
-Watch: additionally, align with, crucial, delve, emphasizing, enduring,
-enhance, fostering, garner, highlight (verb), interplay, intricate, key
-(adjective), landscape (abstract), pivotal, showcase, tapestry, testament,
+Watch: additionally, align with, boasts, bolstered, crucial, delve,
+emphasizing, enduring, enhance, fostering, garner, highlight (verb),
+interplay, intricate, key (adjective), landscape (abstract),
+meticulous/meticulously, pivotal, robust, showcase, tapestry, testament,
 underscore (verb), valuable, vibrant.
 
 These rose sharply in text produced after 2022 and cluster together: where
 one appears, others usually do.
+
+The set turns over as models change, which is why a hit dates a draft as much
+as it flags it. The source's rough eras:
+
+- **2023 to mid-2024 (GPT-4)** — additionally, boasts, bolstered, crucial,
+  delve, emphasizing, enduring, garner, intricate, interplay, key, landscape,
+  meticulous, pivotal, underscore, tapestry, testament, valuable, vibrant.
+- **Mid-2024 to mid-2025 (GPT-4o)** — align with, bolstered, crucial,
+  emphasizing, enhance, enduring, fostering, highlighting, pivotal,
+  showcasing, underscore, vibrant.
+- **Mid-2025 on (GPT-5)** — emphasizing, enhance, highlighting, showcasing,
+  plus the understated layer in 1.4. Note how short this list is: the current
+  generation is caught less by vocabulary than by the patterns in 1.1 and
+  1.5.
+
+"Delve" is the clearest case — famously overused in 2023, less frequent
+through 2024, largely gone by 2025. Checking for it now mostly finds old
+text.
 
 **Before**
 > Additionally, an enduring testament to Italian colonial influence is the
@@ -106,7 +125,18 @@ decoration.
 ## 1.6 Copula avoidance
 
 Elaborate verbs standing in for "is" and "has": serves as, stands as, marks,
-represents, boasts, features, offers.
+functions as, operates as, represents, boasts, features, maintains, offers.
+Studies found the words *is* and *are* dropped over 10% in academic writing
+in 2023, with no comparable change before that.
+
+Two variants worth naming. In an opening sentence, "refers to" treats the
+subject as a term rather than a thing — "Catchment area refers to the
+geographic area from which..." where "is" was available. And the elaborated
+career verb: "ventured into politics as a candidate" for "was a candidate",
+"began his career as" for "was".
+
+**Do not confuse this with the past perfect.** "Has been featured" is
+ordinary English, not copula avoidance.
 
 **Before**
 > Gallery 825 serves as LAAA's exhibition space. It features four rooms and
@@ -403,6 +433,30 @@ The editorial consequence: false accusations drive people away and poison the
 atmosphere. When applying this catalog to someone else's writing, the correct
 output is "this passage has these characteristics," never "this was written
 by AI."
+
+## 5.1 Signs of human writing
+
+The source's other half, and the useful one when putting voice back. These
+were observed over twenty-five years of writing to be **more** common in
+human text than in model output. Restoring them is source-backed; stripping
+them is the over-correction this catalog most often causes.
+
+- **Simple is/has phrases.** "There is a", "it has a". The plain copula is a
+  human habit. See 1.6 for the avoidance pattern this is the cure for.
+- **Plain words where a stiff synonym exists.** wrote not authored, moved not
+  relocated, used not utilized, tried not attempted, died not passed away.
+- **Superlative or definitive statements.** "One of the best", "is the only",
+  "was the first". Models hedge away from commitment; people commit.
+- **Hedging qualifiers and intensifiers.** very, perhaps, tends to. Note this
+  is the opposite of 1.16 — a *stack* of hedges is a tell, a single "very" is
+  a person. Do not cut these on sight.
+- **Isolated wordy constructions.** "as a result of", "in order to", "all of
+  the", "a part of", "the fact that". Tightening every one of these is how an
+  edit ends up sounding machine-processed.
+
+Two more the source lists, useful only with context you rarely have when
+editing a draft: text predating 30 November 2022 cannot be AI, and a writer
+who can explain why they made a specific choice is usually the writer.
 
 ---
 

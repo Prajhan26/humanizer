@@ -72,12 +72,8 @@ Estimates drift toward flattering the edit.
 ## Process
 
 1. Read the draft. Note its register and who it is for.
-2. If the draft is a file, run `python3 scripts/scan.py FILE` and work from
-   its output. It gives you the fingerprint to preserve, computed counts, and
-   catalog hits with the governing section, which satisfies rules 2 and 5
-   mechanically. A low signal count is not a clean bill of health: the scan
-   cannot see bare antithesis, an analogy that fails to close, a claim with
-   no evidence, or cadence. Those still need reading.
+2. Note the mechanical fingerprint before touching anything: dash style,
+   quote style, spelling variety. Rule 2 depends on it.
 3. Scan the pattern families below. Load `reference.md` for the full catalog,
    examples, and the false-positive notes on any pattern needing judgment.
 4. Rewrite. Preserve meaning and register. Remove the machine's habits, not
@@ -170,6 +166,13 @@ detectable in its own right.
 - Concrete over abstract, especially for feeling. Not "concerning" but the
   specific thing that caused the concern.
 - Leave some mess. A tangent, an unresolved qualification.
+
+Five of these are source-backed rather than taste, listed in `reference.md`
+5.1 as more common in human writing than in model output: plain is/has
+constructions, plain words over stiff synonyms (wrote not authored, used not
+utilized), definitive statements, single hedges and intensifiers like "very"
+or "perhaps", and wordy constructions like "in order to". Tightening all of
+those is the standard over-correction. Do not.
 
 ## Writing from scratch
 
