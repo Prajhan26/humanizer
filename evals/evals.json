@@ -55,7 +55,7 @@
     {
       "id": "restraint-curly-quotes",
       "category": "restraint",
-      "prompt": "Does this look AI-written? It uses curly quotes throughout: The report called it a \u201cstructural failure\u201d rather than an accident.",
+      "prompt": "Does this look AI-written? It uses curly quotes throughout: The report called it a “structural failure” rather than an accident.",
       "assertions": [
         "Does NOT cite curly quotes as evidence of AI authorship",
         "Notes curly quotes are standard in professional typesetting or that some models avoid them"
@@ -114,13 +114,17 @@
       "id": "no-trigger-code",
       "category": "triggering",
       "prompt": "Write a Python function that reverses a linked list.",
-      "assertions": ["Skill was NOT invoked"]
+      "assertions": [
+        "Skill was NOT invoked"
+      ]
     },
     {
       "id": "no-trigger-summary",
       "category": "triggering",
       "prompt": "Summarize this meeting transcript into action items.",
-      "assertions": ["Skill was NOT invoked"]
+      "assertions": [
+        "Skill was NOT invoked"
+      ]
     },
     {
       "id": "restraint-no-fabrication",
@@ -164,6 +168,53 @@
         "Consolidates into connected prose rather than substituting vocabulary",
         "States that paragraph cadence is not covered by the catalog and flags the call as its own",
         "Does not merely rejoin beats with periods while leaving the rhythm intact"
+      ]
+    },
+    {
+      "id": "removal-litotes",
+      "category": "removal",
+      "prompt": "Humanize this: The rollout was not without merit, and adoption has been not uncommon among mid-size teams, which is no small feat given the constraints.",
+      "assertions": [
+        "Skill was invoked",
+        "No 'not without', 'not uncommon', or 'no small feat' remains",
+        "Each negated construction becomes a direct positive claim",
+        "Cites reference.md 1.18 or names litotes",
+        "Does not invent adoption numbers that were not in the input"
+      ]
+    },
+    {
+      "id": "removal-announcement-register",
+      "category": "removal",
+      "prompt": "Humanize this: We're thrilled to announce our new export feature, designed to empower teams to unlock value across their entire workflow ecosystem.",
+      "assertions": [
+        "Skill was invoked",
+        "No 'thrilled to announce' or equivalent enthusiasm opener remains",
+        "No 'empower', 'unlock value', or 'ecosystem' remains",
+        "Leads with what the feature does rather than how the company feels",
+        "Does not fabricate specifics about the export feature that were absent from the input"
+      ]
+    },
+    {
+      "id": "restraint-legitimate-litotes",
+      "category": "restraint",
+      "prompt": "Humanize this: I was not unhappy about the outcome, exactly. I just wanted a different one.",
+      "assertions": [
+        "Does not rewrite 'not unhappy' to 'happy', because the negation carries the meaning",
+        "Recognizes the single instance as below the density threshold in reference.md 1.18",
+        "Makes few or no changes and says why"
+      ]
+    },
+    {
+      "id": "trigger-compose",
+      "category": "triggering",
+      "prompt": "Write a short post about why most engineering postmortems are useless. Make it sound human.",
+      "assertions": [
+        "Skill was invoked",
+        "Takes a clear position rather than surveying both sides",
+        "First line contains a concrete detail or claim, not a topic announcement",
+        "No rule-of-three padding, no generic positive close, no 'hot take:' prefix",
+        "Closes on something specific rather than a forward-looking generality",
+        "Does not present invented statistics as real"
       ]
     },
     {

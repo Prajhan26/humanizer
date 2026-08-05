@@ -1,13 +1,18 @@
 ---
 name: humanizer
-description: Rewrites AI-sounding drafts so they read like a person wrote them. Catches slop vocabulary, significance inflation, contrast reframes, rule-of-three padding, vague attribution, and leftover chatbot register, then puts voice back in. Use on any draft that reads as machine-generated.
-when_to_use: Trigger on "humanize this", "make this sound human", "this reads like AI", "de-slop this", "rewrite this in my voice", or when the user shares a draft and asks whether it sounds machine-written.
+description: Writes and rewrites so the result reads like a person wrote it. Catches slop vocabulary, significance inflation, contrast reframes, rule-of-three padding, litotes, announcement register, vague attribution and leftover chatbot register, then puts voice back in. Also governs writing composed from scratch, where it asks for a committed point of view, concrete detail up front, narrative tension, and a specific close.
+when_to_use: Trigger on "humanize this", "make this sound human", "this reads like AI", "de-slop this", "rewrite this in my voice", when the user shares a draft and asks whether it sounds machine-written, and on any request to write a post, thread, essay or newsletter that should not sound AI-generated.
 allowed-tools: Read, Grep, Glob
 ---
 
 # Humanizer
 
-Rewrite AI-sounding text into prose a person would plausibly have written.
+Produce prose a person would plausibly have written. Two modes, same rules:
+
+- **Rewrite** — a draft exists. Follow the process below.
+- **Compose** — no draft exists. Skip to "Writing from scratch". The catalog
+  still applies, but as constraints on what you generate, not as edits.
+
 Removing patterns is half the job. Voiceless writing is its own tell.
 
 ## Read this before editing anything
@@ -131,6 +136,18 @@ headers, leftover code fences, prompt text left in the output.
 effect in certain contexts." Hedge once when uncertain. Stacked hedges say
 nothing carefully.
 
+**Litotes.** not unlike, not without merit, no small feat, not uncommon.
+Affirming by negating the opposite. Sounds considered, commits to nothing.
+Flag on density, or where the positive form is shorter and truer.
+
+**Announcement register.** "We're thrilled to announce." "Excited to share."
+Manufactured enthusiasm in place of a reason to care. Lead with what changed
+for the reader.
+
+**Corporate vagueness.** "Leveraging our ecosystem's synergies." Abstraction
+stacked until no checkable claim remains. Test: what would be different if
+the sentence were false? If nothing, it is not saying anything.
+
 ## Weak signals: check, do not act on alone
 
 Listed so you recognize them, not so you edit them. See `reference.md`.
@@ -154,12 +171,39 @@ detectable in its own right.
   specific thing that caused the concern.
 - Leave some mess. A tangent, an unresolved qualification.
 
-## Format notes
+## Writing from scratch
+
+When there is no draft, these are the constraints, not a post-hoc cleanup.
+Full version with examples in `reference.md` Part 6. Nothing here comes from
+the primary sources; it is this skill's own philosophy, and rule 4 applies —
+it is taste, and the author may refuse it.
+
+- **Commit to a point of view.** If the piece could have been written by
+  someone who believes the opposite, it is not finished.
+- **Lead with concrete detail.** The first sentence decides whether there is
+  a second. Open on the number, the moment, the line someone actually said.
+- **Build tension.** Facts connected by reasoning, arriving somewhere the
+  reader did not expect. If paragraph four could swap with paragraph two,
+  there is no thread.
+- **Close on something specific.** The last line gets quoted. A generic close
+  wastes the one sentence the reader is guaranteed to reach.
+
+The failure underneath all four: the unattached data point. A number alone is
+a number. A number with "which tells you..." after it is writing.
+
+Then run the audit step from the process above on what you produced. Models
+generate the catalogued patterns while composing, not only while editing.
+
+## Format
 
 - **Short post.** First line is the post. One idea. No "hot take:" prefix.
-- **Thread.** Hook first, each entry advances the argument, last one lands.
-- **Long-form.** Open on tension. Subheadings describe, not perform.
-- **Newsletter.** Subject line states a fact or creates real curiosity.
+- **Thread.** Hook in the first entry. Each entry advances the argument
+  rather than restating it. The last one lands, it does not summarize.
+- **Long-form.** Open on tension, not conclusion. Each paragraph develops one
+  idea fully. Subheadings describe what is below them; they do not perform.
+- **Newsletter.** Subject line states a fact or creates real curiosity, which
+  means the reader cannot guess the answer. Register between a sharp blog
+  post and a warm personal message.
 
 ## Output
 

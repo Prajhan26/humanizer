@@ -37,6 +37,12 @@ SIGNALS = [
     ("section summary", "1.12", r"(?:^|\.\s+)(?:in summary|in conclusion|overall|to sum up)\b"),
     ("generic positive close", "1.15", r"\b(?:the future looks bright|exciting times|continue to evolve|only time will tell)\b"),
     ("hedging stack", "1.16", r"\b(?:could potentially|might(?: well)? (?:have|be) some|it could be argued|in certain contexts|may(?: well)? potentially)\b"),
+    # 1.9. Participial tail after a comma at clause end. Restricted to the
+    # gesture verbs the catalog names; a bare "-ing," matches ordinary prose.
+    ("tacked-on analysis", "1.9", r",\s+(?:highlight|illustrat|underscor|reflect|showcas|demonstrat|signal|mark|cement|solidif|enabl|foster|improv|allow)\w*ing\b"),
+    ("litotes", "1.18", r"\b(?:not un\w+|not without \w+|no small (?:feat|thing)|not (?:uncommon|unlike|unusual|insignificant)|hardly (?:surprising|uncommon))\b"),
+    ("announcement register", "1.19", r"\b(?:(?:we(?:'re| are)|i(?:'m| am))\s+(?:thrilled|excited|delighted|proud)\s+to\s+(?:announce|share|introduce|unveil)|today marks (?:an? )?(?:important |major )?(?:milestone|moment))\b"),
+    ("corporate vagueness", "1.20", r"\b(?:leverag\w+|synerg\w+|holistic|end-to-end|best-in-class|unlock\w* value|seamless\w*|ecosystem|scalable solutions?|empower\w* (?:teams|users|people)|cutting[- ]edge|state[- ]of[- ]the[- ]art)\b"),
     ("register artifact", "Part 3", r"(?:great question|what a fascinating|i hope this helps|let me know if you|as of my last update|i hope this message finds you well|would you like me to|thank you for your time and consideration|dear editors)"),
     ("markup residue", "Part 4", r"(?:turn\d+search\d+|:contentReference|\[(?:URL of|insert |your )[^\]]*\]|^```\s*$)"),
 ]

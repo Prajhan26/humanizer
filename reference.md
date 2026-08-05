@@ -209,6 +209,57 @@ The source cautions that a word being overused by AI does not imply its
 synonyms are, and that context matters. Do not generalize a listed word to
 its neighbors.
 
+## 1.18 Litotes
+
+Affirming by negating the opposite. "Not unlike." "Not without merit." "No
+small feat." "Not uncommon." The construction sounds considered while
+committing to nothing, and it stacks: a paragraph with three of them has an
+author who will not say a plain thing plainly.
+
+**Before**
+> The result was not without merit, and the approach is not uncommon among
+> teams of this size.
+
+**After**
+> The result was worth something. Teams this size do it all the time.
+
+**False-positive note:** litotes is a real rhetorical figure with real uses,
+and the negation sometimes carries the meaning — "not unhappy" is genuinely
+not "happy." Flag on density, or where the positive form would say the same
+thing in fewer words.
+
+## 1.19 Announcement register
+
+"We're thrilled to announce." "We're excited to share." "Today marks an
+important milestone for us." Manufactured enthusiasm standing in for a
+reason the reader should care.
+
+**Before**
+> We're thrilled to announce our latest integration, designed to empower
+> teams to do their best work.
+
+**After**
+> The integration ships today. It cuts the export step, which was the thing
+> people complained about most.
+
+Fix: lead with what changed for the reader. Enthusiasm, if it survives, goes
+after the fact rather than in front of it.
+
+## 1.20 Corporate vagueness
+
+"Leveraging our ecosystem's synergies." "Holistic, end-to-end solutions."
+"Unlocking value across the stack." Abstraction stacked high enough that no
+specific claim is being made, and therefore nothing can be checked.
+
+The test: ask what would be different if the sentence were false. If nothing,
+the sentence is not saying anything.
+
+**Before**
+> We leverage best-in-class infrastructure to deliver scalable solutions.
+
+**After**
+> We run it on Postgres. It handles about 40,000 writes a minute.
+
 ---
 
 # Part 2: Style
@@ -352,6 +403,77 @@ The editorial consequence: false accusations drive people away and poison the
 atmosphere. When applying this catalog to someone else's writing, the correct
 output is "this passage has these characteristics," never "this was written
 by AI."
+
+---
+
+# Part 6: Writing, not only fixing
+
+Everything above is a repair manual. This part is what to do instead, and it
+applies whether a draft already exists or the page is blank. Nothing in this
+part comes from the primary sources; see `SOURCES.md`.
+
+## 6.1 Four principles
+
+**Commit to a point of view.** Reacting to a fact beats reporting it. A draft
+that could have been written by someone who believes the opposite is not
+finished.
+
+**Lead with concrete detail.** The first sentence decides whether there is a
+second one. Open on the specific thing — the number, the moment, the line
+someone actually said — not on the category it belongs to.
+
+**Build tension.** A list of facts is not writing. Facts connected by a
+thread of reasoning, arriving somewhere the reader did not expect, is. If
+paragraph four could be swapped with paragraph two, there is no thread.
+
+**Close on something specific.** The last line is the one that gets quoted.
+A generic close ("the future looks bright", 1.15) throws away the only
+sentence the reader is guaranteed to finish on.
+
+The recurring failure underneath all four is the unattached data point. A
+number alone is a number. A number with "which tells you..." after it is a
+piece of writing.
+
+## 6.2 Format
+
+**Short post.** The first line is the post. One idea, carried the whole way.
+No "hot take:" prefix, no throat-clearing before the claim — the prefix is a
+promise the post then has to keep.
+
+**Thread.** The hook lives in the first entry, not the second. Each
+subsequent entry advances the argument rather than restating it with new
+adjectives. The last entry lands; it does not summarize what the reader just
+read (1.12).
+
+**Long-form.** Open on tension, not conclusion. Each paragraph develops one
+idea to its end before the next one starts. Subheadings describe what is
+below them; they do not perform ("The Plot Thickens").
+
+**Newsletter.** The subject line states a fact or creates real curiosity, and
+curiosity means the reader cannot guess the answer. Register sits between a
+sharp blog post and a warm personal message — closer to a letter than to a
+company update.
+
+## 6.3 Writers worth stealing from
+
+Not templates. Four demonstrations that committing to a perspective works
+across very different subjects.
+
+**Paul Graham** — abstract claim, then a concrete example within two
+sentences. Short words. Treats the reader as intelligent but in a hurry.
+
+**Morgan Housel** — opens on a small story that appears unrelated, then snaps
+it into focus. Writes to work something out rather than to report a
+conclusion he already had.
+
+**Lyn Alden** — shows her work. Presents the data, then says what she thinks
+it means. Does not perform neutrality.
+
+**Cobie** — says the thing everyone is thinking and not saying. No hedging,
+no softening on the way in.
+
+What they share is the thing the catalog cannot supply: a person deciding
+something is true and being willing to be wrong about it in public.
 
 ---
 

@@ -68,8 +68,9 @@ skill targets a writer improving their own draft. Four consequences:
 
 ## Material from outside the primary sources
 
-Two additions the Wikipedia page does not yet catalog as such, drawn from
-2025–2026 documentation of newer model output:
+Additions the Wikipedia page does not catalog as such. Some are drawn from
+2025–2026 documentation of newer model output; the last two are this
+project's own and are not detection claims at all.
 
 - **The understated slop layer** (Part 1.4): quietly, shift, matters, shape,
   land, actually, real, earn, the work, hold, pull, compound, signal. Newer
@@ -80,7 +81,25 @@ Two additions the Wikipedia page does not yet catalog as such, drawn from
   negative parallelism; the promotion to first position reflects its current
   frequency, not a claim in the source.
 
-Both are flagged here rather than presented as Wikipedia's findings.
+- **Litotes** (Part 1.18), **announcement register** (1.19), and **corporate
+  vagueness** (1.20). The Wikipedia page covers promotional register and
+  puffery, which overlap these; splitting them out is an editorial choice
+  made because each has a distinct fix. Litotes in particular is a
+  long-standing rhetorical figure, and calling it an AI tell is a claim about
+  frequency in model output, not about the figure.
+- **The writing philosophy** (Part 6.1) and **the format guidance** (6.2).
+  Neither is in the source, which catalogs what AI text does and says nothing
+  about what good writing does. This is the project's own position.
+- **The four writers named in Part 6.3** — Paul Graham, Morgan Housel, Lyn
+  Alden, Cobie. Characterizations are this project's reading of publicly
+  available work by each. None of them is affiliated with this project,
+  endorses it, or has been consulted about it. They are cited as
+  demonstrations that committing to a perspective works across different
+  subjects, not as an authority for any rule.
+
+All of these are flagged here rather than presented as Wikipedia's findings.
+`SKILL.md` rule 4 requires the skill to label edits driven by this section as
+taste rather than source-backed.
 
 ## Known gap: paragraph cadence
 
