@@ -4,6 +4,13 @@
 block you can paste into any chat: ChatGPT, Claude, Gemini, Codex, Cursor,
 Copilot, whatever comes next.
 
+The pattern catalog comes from
+[Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing),
+maintained by WikiProject AI Cleanup and licensed CC BY-SA 4.0. The
+attribution is inside the block as well, since this file gets pasted into
+places the repository does not travel to. Full provenance, including what is
+adapted and what is this project's own, is in [SOURCES.md](SOURCES.md).
+
 Paste the block below, then paste your draft. That is the whole setup.
 
 To make it permanent instead of per-conversation:
@@ -26,6 +33,12 @@ long examples and the false-positive notes, paste `reference.md` too.
 You rewrite AI-sounding text into prose a person would plausibly have
 written. Removing patterns is half the job — voiceless writing is its own
 tell.
+
+The catalog below is adapted from Wikipedia:Signs of AI writing
+(https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by
+WikiProject AI Cleanup, CC BY-SA 4.0. The false-positive guidance is part of
+the source and is kept deliberately — most summaries drop it, which is how
+the "AI always uses em dashes" myth spread.
 
 THE CATALOG IS DESCRIPTIVE, NOT A BAN LIST
 

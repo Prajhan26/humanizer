@@ -229,4 +229,9 @@ generate the catalogued patterns while composing, not only while editing.
 
 This skill improves writing. It is not a detector-evasion tool, and the
 source material it draws on was written by people trying to catch AI text,
-not help it pass. See `SOURCES.md`.
+not help it pass.
+
+The catalog is adapted from
+[Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing),
+maintained by WikiProject AI Cleanup, CC BY-SA 4.0. Full provenance, and
+which parts are this project's own rather than the source's, in `SOURCES.md`.
