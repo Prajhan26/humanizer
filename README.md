@@ -1,4 +1,4 @@
-# humanizer
+# humanizer — built for ADITI
 
 A Claude Code skill that rewrites AI-sounding drafts into prose a person
 would plausibly have written — and governs writing composed from scratch, so
