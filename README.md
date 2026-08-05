@@ -26,37 +26,65 @@ tell. Half the rules in this repo exist to stop the skill doing that.
 
 ## Before and after
 
-From the ADITI Substack. The founder essay that stress-tested this skill.
+**Before** — 75 words
 
-**Before**
+> AI-assisted coding serves as an enduring testament to the transformative
+> potential of large language models, marking a pivotal moment in the
+> evolution of software development. In today's rapidly evolving
+> technological landscape, these groundbreaking tools are reshaping how
+> engineers ideate, iterate, and deliver, underscoring their vital role in
+> modern workflows.
+>
+> At its core, the value proposition is clear: streamlining processes,
+> enhancing collaboration, and fostering alignment. It's not just about
+> autocomplete; it's about unlocking creativity at scale.
 
-> I was in Ghana in 2010, working in financial services. Carrying cash wasn't
-> merely cumbersome; it was unsafe. People had been harmed because of it.
+**After** — 36 words
 
-**After**
+> Large language models can write working code, and engineers now draft and
+> revise with them.
+>
+> The claim is that this saves time and makes teams work together better.
+> Autocomplete was the earlier, smaller version of it.
 
-> I was in Ghana in 2010, working in financial services. Carrying cash was
-> unsafe. People had been harmed because of it.
+Nine slop words in 75. Two participial tails. Two triplets in four sentences.
+One contrast reframe. `serves as` where `is` was available.
 
-"Wasn't merely cumbersome" is a contrast reframe (1.5) — it invents an
-opposition so the resolution sounds like insight. Cumbersome was never the
-claim, and the next sentence carries the weight anyway.
+And the finding the skill reports underneath the rewrite: **the word count
+fell 52% and the information did not, because there was none.** Every
+sentence in that draft asserts significance. Not one is checkable. It cannot
+be fixed by editing — the next line has to be something like *"our median PR
+went from 3 days to 6 hours"*, and only the author knows that number. The
+skill will not invent one. Rule 1 forbids it.
 
-Now the same pattern, kept:
+### The harder half
+
+Most drafts are not that. Here is the same skill on the founder essay from
+the ADITI Substack, 1,189 words, where the correct answer is mostly *leave it
+alone*.
+
+It flagged six instances of one pattern. Three were real:
+
+> Carrying cash wasn't merely cumbersome; it was unsafe.
+> → Carrying cash was unsafe.
+
+Three were not, including this one, which the skill cut and should not have:
 
 > Because that's what this stage really is: not fear of losing anything, but
 > the discomfort of waiting for your outer reality to catch up with the inner
 > truth you've already admitted to yourself.
 
-Identical construction. The skill cut it, and that was wrong. Readers *do*
-bring "fear of losing something" to a resignation story, so denying it is a
-correction rather than padding — and it sets up a distinction the essay
-collects on two paragraphs later. Restored, and the catch became
-[rule 6](SKILL.md).
+Identical construction to the sentence above it. But readers *do* arrive at a
+resignation story expecting fear of loss, so denying it is a correction, not
+padding — and it sets up a distinction the essay collects on two paragraphs
+later. Cutting it made the sentence say less.
 
-Six instances flagged across 1,189 words. Three survived the test. That ratio
-is the whole design: the scan finds the construction, only reading can tell
-you whether the opposition is real.
+That miss became [rule 6](SKILL.md): removing a pattern may not remove a
+claim.
+
+Six flagged, three edited, zero facts touched, and the author's fifteen
+spaced hyphens left exactly where they were. Any tool can strip words. The
+work is knowing when to stop.
 
 ## Anywhere else
 
