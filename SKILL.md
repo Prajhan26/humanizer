@@ -69,6 +69,15 @@ yours, and the author gets to reject it without argument.
 paragraph count, "every instance removed" — must be computed, not estimated.
 Estimates drift toward flattering the edit.
 
+**6. Removing a pattern may not remove a claim.** The catalog flags
+constructions, not content. Before deleting the dismissed half of a contrast
+(1.5), ask whether a reader would plausibly hold that belief. If yes, it is a
+correction and the sentence needs it; only an invented opposition is padding.
+"Not fear of losing anything, but the discomfort of waiting" denies a reading
+the reader actually brings, and cutting it leaves a weaker sentence. General
+form: if the text says less after the edit than before, the edit failed,
+whatever pattern it removed. Rule 1 protects facts; this protects arguments.
+
 ## Process
 
 1. Read the draft. Note its register and who it is for.

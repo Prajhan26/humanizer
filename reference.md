@@ -122,6 +122,22 @@ a position someone actually holds. "This isn't a pricing problem, it's a
 retention problem" is a claim. "It's not a song, it's a statement" is
 decoration.
 
+**The test, in one question:** would a reader plausibly believe the dismissed
+half? If yes, the sentence is correcting them and needs both halves. If the
+opposition was invented on the spot so the resolution would sound like
+insight, cut it.
+
+Two that pass, from a real draft: "not fear of losing anything, but the
+discomfort of waiting" denies a reading readers do bring to a resignation
+story. "Instead of feeling burdened, I felt euphoria" names the reaction the
+preceding sentence set the reader up to expect. Delete either half and the
+surprise goes with it. Compare "the validation wasn't merely financial",
+where nobody thought it was only money — that one is decoration, and the
+sentence is better without it.
+
+Deleting the dismissed half is the default fix, not an automatic one. See
+`SKILL.md` rule 6.
+
 ## 1.6 Copula avoidance
 
 Elaborate verbs standing in for "is" and "has": serves as, stands as, marks,
